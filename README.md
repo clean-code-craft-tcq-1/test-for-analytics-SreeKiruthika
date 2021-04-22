@@ -2,8 +2,6 @@
 
 Design tests for Analytics functionality on a Battery Monitoring System.
 
-Fill the parts marked '_enter' in the **Tasks** section below.
-
 ## Analysis-functionality to be tested
 
 This section lists the Analysis for which _tests_ must be written.
@@ -42,12 +40,12 @@ What is included in the software unit-test? What is not? Fill this table.
 
 | Item                      | Included?     | Reasoning / Assumption
 |---------------------------|---------------|----------------------------------
-Battery Data-accuracy       | No            | We do not test the accuracy of data, we assume data collection taken care by telelmterics colloector and the same is stored after check in server
+Battery Data-accuracy       | No            | We do not test the accuracy of data, we assume data collection, accuracy and storage taken care by telemetrics collector 
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | No 			| Converter is another client which reads the analysis data stored as a text file adn converts the same
-Counting the breaches       | Yes 			| This is part of the software being developed
+Off-the-shelf PDF converter | No 			      | Converter is another client which reads the analysis data stored as a text file adn converts the same
+Counting the breaches       | Yes 			    | This is part of the software being developed
 Detecting trends            | Yes           | This is part of the software being developed
-Notification utility        | No			| Notification alert via mail is done by mail client
+Notification utility        | No			      | Notification alert via mail is done by mail client
 PDF file storage            | No            | Convertor does, but storage success verified by software
 
 ### List the Test Cases
