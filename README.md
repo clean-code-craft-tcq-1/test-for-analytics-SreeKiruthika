@@ -42,11 +42,11 @@ What is included in the software unit-test? What is not? Fill this table.
 |---------------------------|---------------|----------------------------------
 Battery Data-accuracy       | No            | We do not test the accuracy of data 
 Computation of maximum      | Yes           | This is part of the software being developed
-Off-the-shelf PDF converter | No 	    | Converter is another client which reads the analysis data stored as a text file adn converts the same
-Counting the breaches       | Yes 	    | This is part of the software being developed
+Off-the-shelf PDF converter | No 	          | Converter is another client which reads the analysis data stored as a text file adn converts the same
+Counting the breaches       | Yes 	        | This is part of the software being developed
 Detecting trends            | Yes           | This is part of the software being developed
-Notification utility        | No	    | Notification alert via mail is done by mail client
-PDF file storage            | No            | Convertor does, but storage success verified by software
+Notification utility        | No	          | Notification alert via mail is done by mail client
+PDF file storage            | Yes           | Storage status verified by software adn notification triggered if success or failed
 
 ### List the Test Cases
 
@@ -60,7 +60,7 @@ Add to these tests:
 4. Find the trend of breaches from the readings available in CSV file
 5. Record min/max/brach count/trend data from csv file
 6. Convert recorded data to PDF when a week is over
-6. Notification alert sent when PDF is updated and stored (also alerts if storing / conversion of PDF fails)
+6. Notification alert of PDF storage / conversion status (alerts if storing / conversion of PDF fails)
 7. Write "Invalid input" to the PDF when the csv doesn't contain expected data
 
 
@@ -74,7 +74,7 @@ Enter one part that's real and another part that's faked/mocked.
 |--------------------------|---------------|-----------------------------|---
 Read input from server     | csv file      | internal data-structure     | Fake the server store
 Validate input             | csv data      | valid / invalid             | None - it's a pure function
-Notify report availability |*Report details| notification status         | Mock the notification client service
+Notify report availability | Report details| notification status         | Mock the notification client service
 Report inaccessible server | server address| Access response             | Mock the server with dynamic storage and access responses
 Find minimum and maximum   | csv data      | Min/ Max value              | None - it's a pure function
 Detect trend               | csv data      | trend value                 | None - it's a pure function
