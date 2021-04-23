@@ -62,6 +62,7 @@ Add to these tests:
 6. Convert recorded data to PDF when a week is over
 6. Notification alert of PDF storage / conversion status (alerts if storing / conversion of PDF fails)
 7. Write "Invalid input" to the PDF when the csv doesn't contain expected data
+8. Notification alert from csv data input every week (to validate func call sequence and connection, complete func validation)
 
 
 ### Recognize Fakes and Reality
